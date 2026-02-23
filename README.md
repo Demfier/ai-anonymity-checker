@@ -13,6 +13,14 @@ Check academic papers for double-blind anonymity policy violations. Uses compreh
 
 ## Installation
 
+This project uses `uv` for dependency management. If you don't have `uv` installed, install it first:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Then, set up the project:
+
 ```bash
 # Core
 uv sync
