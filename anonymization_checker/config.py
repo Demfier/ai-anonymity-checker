@@ -26,7 +26,7 @@ PROVIDER_BASE_URLS: dict[str, str] = {
 # Default models for each provider
 PROVIDER_DEFAULT_MODELS: dict[str, str] = {
     LLMProvider.OPENAI: "gpt-4o",
-    LLMProvider.OPENROUTER: "openai/gpt-4o",
+    LLMProvider.OPENROUTER: "google/gemini-3.1-pro-preview",
     LLMProvider.OLLAMA: "llama3.1",
     LLMProvider.VLLM: "default",
 }
