@@ -1,0 +1,28 @@
+[project]
+name = "anonymization-checker"
+version = "0.1.0"
+description = "Check academic papers for double-blind anonymity policy violations"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "docling>=2.70",
+]
+
+[project.optional-dependencies]
+fallback = ["pypdf>=3.0"]
+llm = ["openai>=1.0"]
+web = ["gradio>=4.0"]
+all = ["docling>=2.70", "pypdf>=3.0", "openai>=1.0", "gradio>=4.0"]
+dev = ["pytest", "pytest-cov", "black", "ruff", "mypy"]
+
+[project.scripts]
+anonymization-checker = "anonymization_checker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.uv.workspace]
+members = [
+    "venv",
+]
